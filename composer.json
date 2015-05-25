@@ -1,0 +1,27 @@
+{
+    "name": "paulzi/multicurl",
+    "description": "MultiCurl. A wrapper over curl_multi_init.",
+    "keywords": ["curl", "multicurl"],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/Paul-Zi/multicurl/issues?state=open",
+        "source": "https://github.com/Paul-Zi/multicurl"
+    },
+    "authors": [
+      {
+        "name": "PaulZi",
+        "email": "pavel.zimakoff@gmail.com"
+      }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "php": ">=5.4.0",
+      "ext-curl": "*"
+    },
+    "autoload": {
+      "psr-4": {
+        "paulzi\\multicurl\\": ""
+      }
+    }
+}
