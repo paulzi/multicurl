@@ -1,8 +1,8 @@
 <?php
 /**
- * @link https://github.com/Paul-Zi/multicurl
- * @copyright Copyright (c) 2015 PaulZi (pavel.zimakoff@gmail.com)
- * @license MIT (https://github.com/Paul-Zi/multicurl/blob/master/LICENSE)
+ * @link https://github.com/paulzi/multicurl
+ * @copyright Copyright (c) 2016 PaulZi (pavel.zimakoff@gmail.com)
+ * @license MIT (https://github.com/paulzi/multicurl/blob/master/LICENSE)
  */
 
 namespace paulzi\multicurl;
@@ -78,6 +78,8 @@ class MultiCurl
                 $content  = curl_multi_getcontent($request->curl);
                 $response = curl_getinfo($request->curl);
 
+                curl_multi_remove_handle($this->_mh, $info['handle']);
+
                 if ($info['result'] === CURLE_OK) {
                     $this->onSuccess($request, $response, $content);
                 } else {
@@ -86,8 +88,6 @@ class MultiCurl
                     $this->onError($request, $response, $content, $errCode, $errMsg);
                 }
                 $this->onAlways($request, $response, $content);
-
-                curl_multi_remove_handle($this->_mh, $info['handle']);
             }
             curl_multi_select($this->_mh, 1);
         } while ($running>0 || $this->_updated);

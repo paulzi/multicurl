@@ -1,8 +1,8 @@
 <?php
 /**
- * @link https://github.com/Paul-Zi/multicurl
- * @copyright Copyright (c) 2015 PaulZi (pavel.zimakoff@gmail.com)
- * @license MIT (https://github.com/Paul-Zi/multicurl/blob/master/LICENSE)
+ * @link https://github.com/paulzi/multicurl
+ * @copyright Copyright (c) 2016 PaulZi (pavel.zimakoff@gmail.com)
+ * @license MIT (https://github.com/paulzi/multicurl/blob/master/LICENSE)
  */
 
 namespace paulzi\multicurl;

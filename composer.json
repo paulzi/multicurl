@@ -5,8 +5,8 @@
     "type": "library",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/Paul-Zi/multicurl/issues?state=open",
-        "source": "https://github.com/Paul-Zi/multicurl"
+        "issues": "https://github.com/paulzi/multicurl/issues?state=open",
+        "source": "https://github.com/paulzi/multicurl"
     },
     "authors": [
       {
